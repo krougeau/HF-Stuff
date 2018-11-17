@@ -68,7 +68,7 @@ var particleProperties = {
     alphaFinish: 0,
     emitterShouldTrail: true,
     textures: 'https://content.highfidelity.com/DomainContent/production/Particles/wispy-smoke.png',
-    lifetime: 3900
+    lifetime: 999999
 };
 
 function createParticles() {
@@ -76,6 +76,8 @@ function createParticles() {
     particleProperties.name = PARICLE_NAME_BASE + 'Head'; 
     particleProperties.parentJointIndex = jointID;
     position =  MyAvatar.getJointPosition('Head');
+    var offset = Vec3.multiply(up, 0.1);
+    Vec3.sum(position, offset);
     return Entities.addEntity(particleProperties);
 }
 
