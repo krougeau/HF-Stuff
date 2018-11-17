@@ -2,9 +2,9 @@
 //  Copyright 2018 Kenneth Rougeau
 //  All rights reserved
 //
-// Head In The Clouds avatar cloud particle generator v1.0
+// MountPoint In The Clouds avatar cloud particle generator v1.0
 
-var particleFingers = ['Head'];
+var particleFingers = ['MountPoint'];
 var particleEntities = [];
 var PARICLE_NAME_BASE = 'spawnedCloudParticle'
 
@@ -13,9 +13,9 @@ var particleProperties = {
     type: 'ParticleEffect',
     parentID: MyAvatar.sessionUUID,
     color: {
-        red: 125,
-        green: 125,
-        blue: 125
+        red: 255,
+        green: 255,
+        blue: 255
     },
     isEmitting: 1,
     maxParticles: 1000,
@@ -48,19 +48,19 @@ var particleProperties = {
     radiusStart: 0,
     radiusFinish: 0,
     colorSpread: {
-        red: 125,
-        green: 125,
-        blue: 125
+        red: 0,
+        green: 0,
+        blue: 0
     },
     colorStart: {
-        red: 125,
-        green: 125,
-        blue: 125
+        red: 255,
+        green: 255,
+        blue: 255
     },
     colorFinish: {
-        red: 125,
-        green: 125,
-        blue: 125
+        red: 255,
+        green: 255,
+        blue: 255
     },
     alpha: 0,
     alphaSpread: 0,
@@ -72,13 +72,13 @@ var particleProperties = {
 };
 
 function createParticles() {
-    var jointID = MyAvatar.jointNames.indexOf('Head');
-    particleProperties.name = PARICLE_NAME_BASE + 'Head'; 
+    var jointID = MyAvatar.jointNames.indexOf('MountPoint');
+    particleProperties.name = PARICLE_NAME_BASE + 'MountPoint'; 
     particleProperties.parentJointIndex = jointID;
-    position =  MyAvatar.getJointPosition('Head');
-    var offset = Vec3.multiply(up, 1.0);
-    Vec3.sum(position, offset);
-    Entities.addEntity(particleProperties);
+    position =  MyAvatar.getJointPosition('MountPoint');
+    // var offset = Vec3.multiply(up, 1.0);
+    // Vec3.sum(position, offset);
+    return Entities.addEntity(particleProperties);
 }
 
 function addParticles() {
