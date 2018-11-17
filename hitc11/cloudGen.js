@@ -13,9 +13,9 @@ var particleProperties = {
     type: 'ParticleEffect',
     parentID: MyAvatar.sessionUUID,
     color: {
-        red: 255,
-        green: 255,
-        blue: 255
+        red: null,
+        green: null,
+        blue: null
     },
     isEmitting: 1,
     maxParticles: 1000,
@@ -48,19 +48,19 @@ var particleProperties = {
     radiusStart: 0,
     radiusFinish: 0,
     colorSpread: {
-        red: 255,
-        green: 255,
-        blue: 255
+        red: null,
+        green: null,
+        blue: null
     },
     colorStart: {
-        red: 255,
-        green: 255,
-        blue: 255
+        red: null,
+        green: null,
+        blue: null
     },
     colorFinish: {
-        red: 255,
-        green: 255,
-        blue: 255
+        red: null,
+        green: null,
+        blue: null
     },
     alpha: 0,
     alphaSpread: 0,
@@ -76,7 +76,7 @@ function createParticles() {
     particleProperties.name = PARICLE_NAME_BASE + 'Head'; 
     particleProperties.parentJointIndex = jointID;
     position =  MyAvatar.getJointPosition('Head');
-    var offset = Vec3.multiply(up, 0.1);
+    var offset = Vec3.multiply(up, 0.25);
     Vec3.sum(position, offset);
     return Entities.addEntity(particleProperties);
 }
