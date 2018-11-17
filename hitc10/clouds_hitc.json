@@ -1,0 +1,100 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "accelerationSpread": {
+                "x": 0,
+                "y": 0,
+                "z": 0.029999999329447746
+            },
+            "alpha": 0,
+            "alphaFinish": 0,
+            "alphaStart": 1,
+            "angularDamping": 0,
+            "canCastShadow": false,
+            "clientOnly": false,
+            "colorFinish": {
+                "blue": null,
+                "green": null,
+                "red": null
+            },
+            "colorStart": {
+                "blue": null,
+                "green": null,
+                "red": null
+            },
+            "created": "2018-11-17T08:53:30Z",
+            "damping": 0,
+            "dimensions": {
+                "x": 6.394700050354004,
+                "y": 6.394700050354004,
+                "z": 6.394700050354004
+            },
+            "emitAcceleration": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "emitDimensions": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "emitOrientation": {
+                "w": 1,
+                "x": -1.52587890625e-05,
+                "y": -1.52587890625e-05,
+                "z": -1.52587890625e-05
+            },
+            "emitRadiusStart": 0,
+            "emitRate": 10,
+            "emitSpeed": 0,
+            "emitterShouldTrail": true,
+            "grab": {
+                "equippableLeftRotation": {
+                    "w": 1,
+                    "x": -1.52587890625e-05,
+                    "y": -1.52587890625e-05,
+                    "z": -1.52587890625e-05
+                },
+                "equippableRightRotation": {
+                    "w": 1,
+                    "x": -1.52587890625e-05,
+                    "y": -1.52587890625e-05,
+                    "z": -1.52587890625e-05
+                },
+                "grabbable": false
+            },
+            "id": "{f0f6feb9-bba6-4260-9b45-64d703fc949d}",
+            "lastEdited": 1542445858580121,
+            "lastEditedBy": "{b87c70c0-1282-4d2e-8424-5c8671f882cc}",
+            "lifespan": 13,
+            "maxParticles": 100,
+            "name": "CloudEffect_HitC",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "particleRadius": 0,
+            "queryAACube": {
+                "scale": 11.075945854187012,
+                "x": -5.537972927093506,
+                "y": -5.537972927093506,
+                "z": -5.537972927093506
+            },
+            "radiusFinish": 0,
+            "radiusSpread": 0.12999999523162842,
+            "radiusStart": 0,
+            "rotation": {
+                "w": 0.7094072103500366,
+                "x": -4.57763671875e-05,
+                "y": -4.57763671875e-05,
+                "z": -0.7047989368438721
+            },
+            "speedSpread": 0,
+            "spinFinish": 0,
+            "spinStart": 0,
+            "textures": "https://content.highfidelity.com/DomainContent/production/Particles/wispy-smoke.png",
+            "type": "ParticleEffect"
+        }
+    ],
+    "Id": "{7ec19b62-a73f-4421-87cc-945ee15109ec}",
+    "Version": 96
+}
