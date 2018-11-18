@@ -21,12 +21,16 @@ var entityID = Entities.addEntity({
 });
 print("Sphere created: " + entityID);
 
-var level = Audio.inputLevelChanged(level);
-var input = Audio.inputReceived(inputSamples);
+var level = 0.0;
+var input = [];
 
 function updateAudioInfo(){    
+    if(Audio.inputLevelChanged(level)){
     print("Level: " + level);    
+    }
+    if(Audio.inputReceived(inputSamples)){
     print("Input: " + input);
+    }
 }
 
 Script.update.connect(updateAudioInfo);
