@@ -15,9 +15,9 @@ var entityID = Entities.addEntity({
   lifetime: -1,
   dynamic: false,
   color: color,
-  position: { x: 0, y: 0, z: 1 },
+  position: MyAvatar.position,
   rotation: MyAvatar.orientation,
-  dimensions: { x: 0.5, y: 0.5, z: 0.5 }
+  dimensions: { x: 1.0, y: 1.0, z: 1.0 }
 });
 print("Sphere created: " + entityID);
 
