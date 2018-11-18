@@ -1,0 +1,37 @@
+print("SCRIPT STARTED");
+
+var DISTANCE_IN_FRONT_OF_ME = 1;
+var DISTANCE_ABOVE_ME = 0;
+color = { red: 255, green: 255, blue: 255 };
+var sound = SoundCache.getSound(Script.resourcesPath() + "sounds/test.mp3");
+var injector;
+var injectorOptions = {
+  position = Vec3.sum(MyAvatar.position,Vec3.sum(
+                        Vec3.multiply(Quat.getForward(MyAvatar.orientation), DISTANCE_ABOVE_ME), 
+Vec3.multiply(Quat.getForward(MyAvatar.orientation), DISTANCE_IN_FRONT_OF_ME)))
+};
+
+Script.setTimeout(function () { // Give the sound time to load.
+  injector = Audio.playSound(sound, injectorOptions);
+}, 1000);
+
+var entityID = Entities.addEntity({
+  type: "Sphere",
+  lifetime: -1,
+  dynamic: false,
+  color: color,
+  position: injectorOptions.position,
+  rotation: MyAvatar.orientation,
+  dimensions: { x: 0.5, y: 0.5, z: 0.5 }
+});
+print("Sphere created: " + entityID);
+
+var level = Audio.inputLevelChanged(level);
+var input = Audio.inputReceived(inputSamples);
+
+function updateAudioInfo(deltaTime){    
+    print("Level: " + level);    
+    print("Input: " + input);
+}
+
+print("SCRIPT ENDED");
