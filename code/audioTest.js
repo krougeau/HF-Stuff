@@ -3,7 +3,7 @@ print("SCRIPT STARTED");
 var DISTANCE_IN_FRONT_OF_ME = 1;
 var DISTANCE_ABOVE_ME = 0;
 color = { red: 255, green: 255, blue: 255 };
-var sound = SoundCache.getSound(Script.resourcesPath() + "sounds/test.mp3");
+var sound = SoundCache.getSound("atp:/sounds/test.mp3");
 var injector;
 
 Script.setTimeout(function () { // Give the sound time to load.
