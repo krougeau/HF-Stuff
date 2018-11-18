@@ -24,7 +24,7 @@ print("Sphere created: " + entityID);
 var level = Audio.inputLevelChanged(level);
 var input = Audio.inputReceived(inputSamples);
 
-function updateAudioInfo(deltaTime){    
+function updateAudioInfo(){    
     print("Level: " + level);    
     print("Input: " + input);
 }
