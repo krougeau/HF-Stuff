@@ -6,8 +6,7 @@ color = { red: 255, green: 255, blue: 255 };
 var sound = SoundCache.getSound(Script.resourcesPath() + "sounds/test.mp3");
 var injector;
 var injectorOptions = {
-  position = Vec3.sum(MyAvatar.position,Vec3.sum(
-                        Vec3.multiply(Quat.getForward(MyAvatar.orientation), DISTANCE_ABOVE_ME), 
+  position = Vec3.sum(MyAvatar.position,Vec3.sum(Vec3.multiply(Quat.getForward(MyAvatar.orientation), DISTANCE_ABOVE_ME), 
 Vec3.multiply(Quat.getForward(MyAvatar.orientation), DISTANCE_IN_FRONT_OF_ME)))
 };
 
@@ -20,7 +19,7 @@ var entityID = Entities.addEntity({
   lifetime: -1,
   dynamic: false,
   color: color,
-  position: injectorOptions.position,
+  position: { x: 0, y: 0, z: 1 },
   rotation: MyAvatar.orientation,
   dimensions: { x: 0.5, y: 0.5, z: 0.5 }
 });
