@@ -28,8 +28,8 @@ function updateAudioInfo(){
     if(Audio.inputLevelChanged(level)){
     print("Level: " + level);    
     }
-    if(Audio.inputReceived(inputSamples)){
-    print("Input: " + input);
+    if(Audio.inputReceived(input)){
+    print("Input received!");
     }
 }
 
