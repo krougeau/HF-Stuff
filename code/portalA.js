@@ -1,6 +1,7 @@
 (function(){ 
     var teleport;
-    var portalDestination;
+    // var portalDestination;
+    var portalDestination = "roguesgallery/7.93562,-11.4888,102.422/8.7013e-05,0.999971,-1.85826e-05,-0.00767109";
     var animationURL;
 
     function playSound() {
@@ -20,7 +21,6 @@
 
       var properties = Entities.getEntityProperties(entityID); // in case the userData/portalURL has changed
       // portalDestination = properties.userData;
-	portalDestination = "roguesgallery/7.93562,-11.4888,102.422/8.7013e-05,0.999971,-1.85826e-05,-0.00767109";
 
       print("enterEntity() .... Doh! The portal destination is " + portalDestination);
 
