@@ -53,7 +53,8 @@
             print("Near Trigger");
             promptToTip();
         }
-    };
+    }
+   };
 
     return new TipJar();
 });
