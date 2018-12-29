@@ -44,16 +44,13 @@
         startFarTrigger: function() {
             // When the user running this script clicks the attached entity with
             // their hand controller lasers, call this function.
-            print("Far Trigger");
             promptToTip();
         }
         startNearTrigger: function() {
             // When the user running this script clicks the attached entity with
             // their hand controller lasers, call this function.
-            print("Near Trigger");
             promptToTip();
         }
-    }
    };
 
     return new TipJar();
