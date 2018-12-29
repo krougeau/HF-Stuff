@@ -45,7 +45,7 @@
             // When the user running this script clicks the attached entity with
             // their hand controller lasers, call this function.
             promptToTip();
-        }
+        },
         startNearTrigger: function() {
             // When the user running this script clicks the attached entity with
             // their hand controller lasers, call this function.
