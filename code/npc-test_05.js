@@ -54,7 +54,7 @@ function fixColor()
 var externalFunction = (function () {
 	this.externalCall = function() {
 		print("IT WORKED!!!!");
-	}
-}
+	};
+});
 	
 });
