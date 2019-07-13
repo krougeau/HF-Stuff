@@ -3,6 +3,8 @@
 var started = false;
 var scanPosition = {x: 0, y: 0 , z:0};
 var npcs = Entities.findEntitiesByName("NPC", scanPosition, 10000, false);
+	
+Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
 
 print("Number of NPCs: " + npcs.length);
 
