@@ -11,7 +11,7 @@ print("Number of NPCs: " + npcs.length);
 for (i = 0; i < npcs.length; i++)
 	{
 	  startPos.push(Entities.getEntityProperties(npcs[i]).position);
-	  print("NPC #" + i + " started at " + JSON.stringify(startPos[0]));
+	  print("NPC #" + i + " started at " + JSON.stringify(startPos[i]));
 	};
 
 this.clickDownOnEntity = function (entityID, mouseEvent) {
@@ -54,7 +54,8 @@ this.unload = function (entityID) {
 
 this.externalCall = function (entityID) {	
 	  for (i = 0; i < npcs.length; i++)
-	  {
+	  {	    
+	    print ("i Check: " + i);
 	    Entities.editEntity(npcs[i], { velocity: { x: 0.0, y: 0, z: 0} });
 	    Entities.editEntity(npcs[i], { position: startPos[i] });
 	  };
