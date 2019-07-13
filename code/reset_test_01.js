@@ -1,7 +1,8 @@
 (function () {
 
 var npcs = Entities.findEntitiesByName("NPC", scanPosition, 10000, false);
-var startPos = new Array();
+// var startPos = new Array();
+var startPos;
 
 print("(RESET) Number of NPCs: " + npcs.length);
 
