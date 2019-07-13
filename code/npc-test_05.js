@@ -51,9 +51,10 @@ function fixColor()
 	  Entities.editEntity(this, { color: { red: 0, green: 0, blue: 255} });
 	  print("Fixing color.");
 	}
-function externalCall()
-	{
-	  print("IT WORKED!!!!");
+var externalFunction = (function () {
+	this.externalCall = function() {
+		print("IT WORKED!!!!");
 	}
+}
 	
 });
