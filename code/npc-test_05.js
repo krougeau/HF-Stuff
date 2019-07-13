@@ -24,7 +24,7 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
 	    var vel = Entities.getEntityProperties(npcs[i]).velocity;
 	    print("NPC #" + i + " is moving at velocity " + JSON.stringify(vel));
 	    endPos[i] = Entities.getEntityProperties(npcs[i]).position;
-	    print("NPC #" + i + " stopped at " + endPos[i]);
+	    print("NPC #" + i + " stopped at " + JSON.stringify(endPos[i]));
 	  };
             Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
             started = false;
