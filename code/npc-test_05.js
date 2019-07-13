@@ -9,14 +9,12 @@ var startPos = new Array();
 var resetButtons = Entities.findEntitiesByName("Reset Button", scanPosition, 10000, false);
 var resetButton = resetButtons[0];
 
-var _this = this;
-
 print("Number of NPCs: " + npcs.length);
 
 for (i = 0; i < npcs.length; i++)
 	{
-	  var startPos = Entities.getEntityProperties(npcs[i]).position;
-	  print("NPC #" + i + " is located at " + JSON.stringify(startPos));
+	  startPos.push(Entities.getEntityProperties(npcs[i]).position);
+	  print("NPC #" + i + " started at " + JSON.stringify(startPos[0]));
 	};
 
 this.clickDownOnEntity = function (entityID, mouseEvent) {
@@ -46,14 +44,17 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
 this.preload = function (entityID) {
         print("Preloading Start/Stop Button");
 	Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
+	started = false;
     }
 
 this.unload = function (entityID) {
 	print("Unloading Start/Stop Button");
 	Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
+	started = false;
     }
 
 this.externalCall = function (entityID) {
+	/*
 	  for (i = 0; i < npcs.length; i++)
 	  {
 	    Entities.editEntity(npcs[i], { velocity: { x: 0.0, y: 0, z: 0} });
@@ -61,6 +62,7 @@ this.externalCall = function (entityID) {
 	  };
 	Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
 	started = false;
+	*/
 	print ("Reset & stopped.");
   };
 	
