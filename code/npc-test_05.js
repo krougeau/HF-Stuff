@@ -69,7 +69,18 @@ this.externalCall = function (entityID) {
   };
 	
 	Script.update.connect(function (deltaTime) {
-    		print("Update: " + deltaTime);
+    		checkNPCs();
 	});
+	
+	function checkNPCs()
+	{
+	  for (i = 0; i < npcs.length; i++)
+	  {
+	    if(Entities.getEntityProperties(npcs[i]).position.x >= 20)
+	    {
+	      Entities.editEntity(npcs[i], { position: {x: -20 ,y: startPos[i].y ,z: startPos[i].z} });
+	    }	    
+	  };
+	}
 	
 });
