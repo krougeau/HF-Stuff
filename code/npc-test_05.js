@@ -6,6 +6,8 @@ var scanPosition = {x: 0, y: 0 , z:0};
 var npcs = Entities.findEntitiesByName("NPC", scanPosition, 10000, false);
 var startPos = [];
 var endPos = [];
+	
+var waypointEast = Entities.findEntitiesByName("Waypoint East", scanPosition, 10000, false)[0];
 
 print("Number of NPCs: " + npcs.length);
 
@@ -65,5 +67,9 @@ this.externalCall = function (entityID) {
 	started = false;	
 	print ("Reset & stopped.");
   };
+	
+	Script.update.connect(function (deltaTime) {
+    		print("Update: " + deltaTime);
+	});
 	
 });
