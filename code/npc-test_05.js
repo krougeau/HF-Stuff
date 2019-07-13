@@ -3,6 +3,7 @@
 var started = false;
 var scanPosition = {x: 0, y: 0 , z:0};
 var npcs = Entities.findEntitiesByName("NPC", scanPosition, 10000, false);
+public var externalCall = externalFunction();
 
 print("Number of NPCs: " + npcs.length);
 
@@ -51,7 +52,7 @@ function fixColor()
 	  Entities.editEntity(this, { color: { red: 0, green: 0, blue: 255} });
 	  print("Fixing color.");
 	}
-function externalCall()
+function externalFunction()
 	{
 	  print("IT WORKED!!!!");
 	}
