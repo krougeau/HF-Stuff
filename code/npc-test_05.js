@@ -54,10 +54,10 @@ this.unload = function (entityID) {
 
 this.externalCall = function (entityID) {	
 	  for (i = 0; i < npcs.length; i++)
-	  {	    
-	    print ("i Check: " + i);
+	  {	    	    
 	    Entities.editEntity(npcs[i], { velocity: { x: 0.0, y: 0, z: 0} });
-	    Entities.editEntity(npcs[i], { position: startPos[i] });
+	    // Entities.editEntity(npcs[i], { position: startPos[i] });
+	    print ("Start Position #" + i + " = " + JSON.stringify(startPos[i]));
 	  };
 	Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
 	started = false;	
