@@ -18,7 +18,7 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
             started = false;
             print ("Stopping.");
         } else {
-            // Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
+            Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
             started = true;
             print ("Starting.");
         }
