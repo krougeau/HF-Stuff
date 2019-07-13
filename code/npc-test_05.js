@@ -57,7 +57,7 @@ this.externalCall = function (entityID) {
 	  {	    	    
 	    Entities.editEntity(npcs[i], { velocity: { x: 0.0, y: 0, z: 0} });
 	    // Entities.editEntity(npcs[i], { position: { x: startPos[i].x, y: startPos[i].y, z: startPos[i].z} });
-	    print ("Start Position #" + i + " = X:" + JSON.stringify(startPos[i].x) + ", Y:" + JSON.stringify(startPos[i].y) +  + ", Z:" + JSON.stringify(startPos[i].y));
+	    print("NPC #" + i + " returned to " + JSON.stringify(startPos[i]));
 	  };
 	Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
 	started = false;	
