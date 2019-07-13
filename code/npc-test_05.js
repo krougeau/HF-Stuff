@@ -37,16 +37,23 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
     };
 	
 this.preload = function () {
-        fixColor();
+        print("Preloading Start/Stop Button");
+	fixColor();
     }
 
 this.unload = function () {
+	print("Unloading Start/Stop Button");
 	fixColor();
     }
 	
 function fixColor()
 	{
 	  Entities.editEntity(this, { color: { red: 0, green: 0, blue: 255} });
+	  print("Fixing color.");
 	}
-
+function externalCall()
+	{
+	  print("IT WORKED!!!!");
+	}
+	
 });
