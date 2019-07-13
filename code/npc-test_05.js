@@ -5,12 +5,14 @@ var scanPosition = {x: 0, y: 0 , z:0};
 
 var npcs = Entities.findEntitiesByName("NPC", scanPosition, 10000, false);
 var startPos = [];
+var endPos = [];
 
 print("Number of NPCs: " + npcs.length);
 
 for (i = 0; i < npcs.length; i++)
 	{
 	  startPos.push(Entities.getEntityProperties(npcs[i]).position);
+	  endPos.push(Entities.getEntityProperties(npcs[i]).position);
 	  print("NPC #" + i + " started at " + JSON.stringify(startPos[i]));
 	};
 
@@ -20,7 +22,9 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
 	  {
 	    Entities.editEntity(npcs[i], { velocity: { x: 0.0, y: 0, z: 0} });
 	    var vel = Entities.getEntityProperties(npcs[i]).velocity;
-	    print("NPC #" + i + " is moving at " + JSON.stringify(vel));
+	    print("NPC #" + i + " is moving at velocity " + JSON.stringify(vel));
+	    endPos[i] = Entities.getEntityProperties(npcs[i]).position);
+	    print("NPC #" + i + " stopped at " + endPos[i]);
 	  };
             Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
             started = false;
@@ -30,7 +34,7 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
 	  {
 	    Entities.editEntity(npcs[i], { velocity: { x: 0.5, y: 0, z: 0} });
 	    var vel = Entities.getEntityProperties(npcs[i]).velocity;
-	    print("NPC #" + i + " is moving at " + JSON.stringify(vel));
+	    print("NPC #" + i + " is moving at velocity " + JSON.stringify(vel));
 	  };
             Entities.editEntity(entityID, { color: { red: 0, green: 255, blue: 0} });
             started = true;
@@ -40,13 +44,13 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
 	
 this.preload = function (entityID) {
         print("Preloading Start/Stop Button");
-	Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
+	Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
 	started = false;
     }
 
 this.unload = function (entityID) {
 	print("Unloading Start/Stop Button");
-	Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
+	Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
 	started = false;
     }
 
