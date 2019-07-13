@@ -42,14 +42,12 @@ this.preload = function (entityID) {
         print("Preloading Start/Stop Button");
 	Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
 	started = false;
-	startPos = [];
     }
 
 this.unload = function (entityID) {
 	print("Unloading Start/Stop Button");
 	Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
 	started = false;
-	startPos = [];
     }
 
 this.externalCall = function (entityID) {	
