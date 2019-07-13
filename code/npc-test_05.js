@@ -17,7 +17,7 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
 	  for (i = 0; i < npcs.length; i++)
 	  {
 	    Entities.editEntity(npcs[i], { linearVelocity: { x: 0.5, y: 0, z: 0} });
-	    var vel = Entities.getEntityProperties(npcs[i]).linearVelocity;
+	    var vel = Entities.getEntityProperties(npcs[i]).velocity;
 	    print("NPC #" + i + " is moving at " + JSON.stringify(vel));
 	  };
             Entities.editEntity(entityID, { color: { red: 0, green: 255, blue: 0} });
@@ -27,7 +27,7 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
 	  for (i = 0; i < npcs.length; i++)
 	  {
 	    Entities.editEntity(npcs[i], { linearVelocity: { x: 0, y: 0, z: 0} });
-	    var vel = Entities.getEntityProperties(npcs[i]).linearVelocity;
+	    var vel = Entities.getEntityProperties(npcs[i]).velocity;
 	    print("NPC #" + i + " is moving at " + JSON.stringify(vel));
 	  };
             Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
