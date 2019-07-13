@@ -23,44 +23,45 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
         if (started){
 	  for (i = 0; i < npcs.length; i++)
 	  {
+	    Entities.editEntity(npcs[i], { velocity: { x: 0.0, y: 0, z: 0} });
+	    var vel = Entities.getEntityProperties(npcs[i]).velocity;
+	    print("NPC #" + i + " is moving at " + JSON.stringify(vel));
+	  };
+            Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
+            started = false;
+            print ("Stopped.");
+        } else {
+	  for (i = 0; i < npcs.length; i++)
+	  {
 	    Entities.editEntity(npcs[i], { velocity: { x: 0.5, y: 0, z: 0} });
 	    var vel = Entities.getEntityProperties(npcs[i]).velocity;
 	    print("NPC #" + i + " is moving at " + JSON.stringify(vel));
 	  };
             Entities.editEntity(entityID, { color: { red: 0, green: 255, blue: 0} });
-            started = false;
-            print ("Starting.");
-        } else {
-	  for (i = 0; i < npcs.length; i++)
-	  {
-	    Entities.editEntity(npcs[i], { velocity: { x: 0, y: 0, z: 0} });
-	    var vel = Entities.getEntityProperties(npcs[i]).velocity;
-	    print("NPC #" + i + " is moving at " + JSON.stringify(vel));
-	  };
-            Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
             started = true;
-            print ("Stopping.");
+            print ("Started.");
         }
     };
 	
-this.preload = function () {
+this.preload = function (entityID) {
         print("Preloading Start/Stop Button");
-	Entities.editEntity(_this, { color: { red: 0, green: 0, blue: 255} });
+	Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
     }
 
-this.unload = function () {
+this.unload = function (entityID) {
 	print("Unloading Start/Stop Button");
-	Entities.editEntity(_this, { color: { red: 0, green: 0, blue: 255} });
+	Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
     }
 
-resetButton.clickDownOnEntity = function (entityID, mouseEvent) {
+this.externalCall = function (entityID) {
 	  for (i = 0; i < npcs.length; i++)
 	  {
 	    Entities.editEntity(npcs[i], { velocity: { x: 0.0, y: 0, z: 0} });
 	    Entities.editEntity(npcs[i], { position: {x: startPos[i].x, y: startPos[i].y, z: startPos[i].z} });
 	  };
-	Entities.editEntity(_this, { color: { red: 255, green: 0, blue: 0} });
-	started = false;	
+	Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
+	started = false;
+	print ("Reset & stopped.");
   };
 	
 });
