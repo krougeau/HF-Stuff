@@ -14,7 +14,8 @@ for (i = 0; i < npcs.length; i++)
 	};
 
 this.clickDownOnEntity = function (entityID, mouseEvent) {
-        Entities.callEntityMethod(controller, "externalCall");       
+        print("Clickity click!");
+	Entities.callEntityMethod(controller, "externalCall");       
     };
 
 });
