@@ -14,7 +14,8 @@ for (i = 0; i < npcs.length; i++)
 	  startPos.push(Entities.getEntityProperties(npcs[i]).position);
 	  endPos.push(Entities.getEntityProperties(npcs[i]).position);
 	  print("NPC #" + i + " started at " + JSON.stringify(startPos[i]));
-	  print("User Data test #" + i + ": bool = " + Entities.getEntityProperties(npcs[i]).userData.testBool + " and string = " + Entities.getEntityProperties(npcs[i]).userData.testString);
+	  // var boomBoxData = JSON.parse(Entities.getEntityProperties(selfEntityID, 'userData').userData);
+	  print("User Data test #" + i + ": bool = " + JSON.parse(Entities.getEntityProperties(npcs[i], 'userData').userData.testBool);
 	};
 
 this.clickDownOnEntity = function (entityID, mouseEvent) {
