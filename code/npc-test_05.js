@@ -37,11 +37,11 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
     };
 	
 this.preload = function () {
-        Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
+        Entities.editEntity(this.entityID, { color: { red: 0, green: 0, blue: 255} });
     }
 
 this.unload = function () {
-        Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
+        Entities.editEntity(this.entityID, { color: { red: 0, green: 0, blue: 255} });
     }
 
 });
