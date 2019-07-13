@@ -16,7 +16,7 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
         if (started){
 	  for (i = 0; i < npcs.length; i++)
 	  {
-	    Entities.editEntity(npcs[i], { linearVelocity: { x: 0.5, y: 0, z: 0} });
+	    Entities.editEntity(npcs[i], { velocity: { x: 0.5, y: 0, z: 0} });
 	    var vel = Entities.getEntityProperties(npcs[i]).velocity;
 	    print("NPC #" + i + " is moving at " + JSON.stringify(vel));
 	  };
@@ -26,7 +26,7 @@ this.clickDownOnEntity = function (entityID, mouseEvent) {
         } else {
 	  for (i = 0; i < npcs.length; i++)
 	  {
-	    Entities.editEntity(npcs[i], { linearVelocity: { x: 0, y: 0, z: 0} });
+	    Entities.editEntity(npcs[i], { velocity: { x: 0, y: 0, z: 0} });
 	    var vel = Entities.getEntityProperties(npcs[i]).velocity;
 	    print("NPC #" + i + " is moving at " + JSON.stringify(vel));
 	  };
