@@ -1,6 +1,6 @@
 (function () {
 
-ar scanPosition = {x: 0, y: 0 , z:0};
+var scanPosition = {x: 0, y: 0 , z:0};
 var npcs = Entities.findEntitiesByName("NPC", scanPosition, 10000, false);
 var startPos = new Array();
 var controller = Entities.findEntitiesByName("StartStop Button", scanPosition, 10000, false);
