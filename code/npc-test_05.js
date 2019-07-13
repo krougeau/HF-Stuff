@@ -4,10 +4,7 @@ var started = false;
 var scanPosition = {x: 0, y: 0 , z:0};
 
 var npcs = Entities.findEntitiesByName("NPC", scanPosition, 10000, false);
-var startPos = new Array();
-
-var resetButtons = Entities.findEntitiesByName("Reset Button", scanPosition, 10000, false);
-var resetButton = resetButtons[0];
+var startPos = [];
 
 print("Number of NPCs: " + npcs.length);
 
@@ -45,24 +42,24 @@ this.preload = function (entityID) {
         print("Preloading Start/Stop Button");
 	Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
 	started = false;
+	startPos = [];
     }
 
 this.unload = function (entityID) {
 	print("Unloading Start/Stop Button");
 	Entities.editEntity(entityID, { color: { red: 0, green: 0, blue: 255} });
 	started = false;
+	startPos = [];
     }
 
-this.externalCall = function (entityID) {
-	/*
+this.externalCall = function (entityID) {	
 	  for (i = 0; i < npcs.length; i++)
 	  {
 	    Entities.editEntity(npcs[i], { velocity: { x: 0.0, y: 0, z: 0} });
 	    Entities.editEntity(npcs[i], { position: {x: startPos[i].x, y: startPos[i].y, z: startPos[i].z} });
 	  };
 	Entities.editEntity(entityID, { color: { red: 255, green: 0, blue: 0} });
-	started = false;
-	*/
+	started = false;	
 	print ("Reset & stopped.");
   };
 	
