@@ -16,12 +16,12 @@
         blue: 0
     };
     var NPC_EAST_DEFAULT_VELOCITY = {
-        x: 0.5,
+        x: -0.5,
         y: 0.0,
         z: 0.0
     };
     var NPC_WEST_DEFAULT_VELOCITY = {
-        x: -0.5,
+        x: 0.5,
         y: 0.0,
         z: 0.0
     };
@@ -244,13 +244,13 @@
     function checkNPCpositions() {
         for (i = 0; i < npc_east_IDs.length; i++) {
             var NPCcurrentXvalue = Entities.getEntityProperties(npc_east_IDs[i], "position").position.x;
-            if (NPCcurrentXvalue >= NPC_POSITION_MAX_X_VALUE) {
+            if (NPCcurrentXvalue <= -NPC_POSITION_MAX_X_VALUE) {
                 sendNPCtoStartPosition(npc_east_IDs[i], NPCstartPositions_East[i], "east");
             }
         }
         for (i = 0; i < npc_west_IDs.length; i++) {
             var NPCcurrentXvalue = Entities.getEntityProperties(npc_west_IDs[i], "position").position.x;
-            if (NPCcurrentXvalue <= -NPC_POSITION_MAX_X_VALUE) {
+            if (NPCcurrentXvalue >= NPC_POSITION_MAX_X_VALUE) {
                 sendNPCtoStartPosition(npc_west_IDs[i], NPCstartPositions_West[i], "west");
             }
         }
@@ -271,14 +271,14 @@
     function sendNPCtoStartPosition(npcID, startPosition, direction) {
         if(direction === "east"){
             var position = {
-                x: -NPC_POSITION_MAX_X_VALUE,
+                x: NPC_POSITION_MAX_X_VALUE,
                 y: startPosition.y,
                 z: startPosition.z
             };
         }
         if(direction === "west"){
             var position = {
-                x: NPC_POSITION_MAX_X_VALUE,
+                x: -NPC_POSITION_MAX_X_VALUE,
                 y: startPosition.y,
                 z: startPosition.z
             };
