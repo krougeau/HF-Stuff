@@ -5,7 +5,7 @@ var controller = Entities.findEntitiesByName("StartStop Button", scanPosition, 1
 
 this.clickDownOnEntity = function (entityID, mouseEvent) {
         print("Clickity click!");
-	Entities.callEntityMethod(controller[0], "externalCall");       
+	Entities.callEntityMethod(controller[0], "resetNPCpositions");       
     };
 
 });
