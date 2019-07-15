@@ -1,3 +1,3 @@
 (function() {
-    // do nothing
+    /* do nothing */
 });
