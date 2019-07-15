@@ -1,0 +1,11 @@
+(function () {
+
+var scanPosition = {x: 0, y: 0 , z:0};
+var controllerIDs = Entities.findEntitiesByName("StartStop Controller", scanPosition, 10000, false);
+
+this.clickDownOnEntity = function (entityID, mouseEvent) {
+        // print("Clickity click!");
+	Entities.callEntityServerMethod(controllerIDs[0], "resetNPCpositions");       
+    };
+
+});
