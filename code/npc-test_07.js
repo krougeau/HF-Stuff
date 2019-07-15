@@ -45,6 +45,7 @@
         "animation": {
             "url": "https://github.com/krougeau/HF-Stuff/raw/master/nny/Johnny_Walking.fbx",
             "fps": 45,
+            startFrame: 0,
             "running": true
         }
     };
@@ -53,6 +54,7 @@
         "animation": {
             "url": "https://github.com/krougeau/HF-Stuff/raw/master/h22/hitc-22_breathing-idle.fbx",
             "fps": 45,
+            startFrame: 0,
             "running": true
         }
     };
@@ -191,26 +193,30 @@
             debugPrint("Stopped.");
         } else {
             for (i = 0; i < npc_east_IDs.length; i++) {
-                setNPCvelocity(npc_east_IDs[i], NPC_EAST_DEFAULT_VELOCITY);
-                var currentVelocity = JSON.stringify(getNPCvelocity(npc_east_IDs[i]));
+                var currentNPC = npc_east_IDs[i];
+                setNPCvelocity(currentNPC, NPC_EAST_DEFAULT_VELOCITY);
+                var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
                 setAnimation(currentNPC, WALKING_ANIMATION);
                 debugPrint("NPC #" + i + " is moving at velocity " + currentVelocity);
             }
             for (i = 0; i < npc_west_IDs.length; i++) {
-                setNPCvelocity(npc_west_IDs[i], NPC_WEST_DEFAULT_VELOCITY);
-                var currentVelocity = JSON.stringify(getNPCvelocity(npc_west_IDs[i]));
+                var currentNPC = npc_west_IDs[i];
+                setNPCvelocity(currentNPC, NPC_WEST_DEFAULT_VELOCITY);
+                var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
                 setAnimation(currentNPC, WALKING_ANIMATION);
                 debugPrint("NPC #" + i + " is moving at velocity " + currentVelocity);
             }
             for (i = 0; i < npc_north_IDs.length; i++) {
-                setNPCvelocity(npc_north_IDs[i], NPC_NORTH_DEFAULT_VELOCITY);
-                var currentVelocity = JSON.stringify(getNPCvelocity(npc_north_IDs[i]));
+                var currentNPC = npc_north_IDs[i];
+                setNPCvelocity(currentNPC, NPC_NORTH_DEFAULT_VELOCITY);
+                var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
                 setAnimation(currentNPC, WALKING_ANIMATION);
                 debugPrint("NPC #" + i + " is moving at velocity " + currentVelocity);
             }
             for (i = 0; i < npc_south_IDs.length; i++) {
-                setNPCvelocity(npc_south_IDs[i], NPC_SOUTH_DEFAULT_VELOCITY);
-                var currentVelocity = JSON.stringify(getNPCvelocity(npc_south_IDs[i]));
+                var currentNPC = npc_south_IDs[i];
+                setNPCvelocity(currentNPC, NPC_SOUTH_DEFAULT_VELOCITY);
+                var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
                 setAnimation(currentNPC, WALKING_ANIMATION);
                 debugPrint("NPC #" + i + " is moving at velocity " + currentVelocity);
             }
