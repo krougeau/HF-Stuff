@@ -126,7 +126,7 @@
         NPCendPositions_South.push(npcPosition);
     });
 
-    function startStopNPCs (params) {
+    function startStopNPCs (id, params) {
         debugPrint("START STOP WAS CALLED");
         entityID = params[0];
         var i;
