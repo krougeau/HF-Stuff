@@ -61,9 +61,7 @@
     var NPCendPositions_North = [];
     var NPCendPositions_South = [];
     
-    this.remotelyCallable = ["checkNPCpositions"];
-    this.remotelyCallable = ["resetNPCpositions"];
-    this.remotelyCallable = ["startStopNPCs"];
+    this.remotelyCallable = ["checkNPCpositions", "resetNPCpositions", "startPosition"];
     
     debugPrint("Number of Eastbound NPCs: " + npc_east_IDs.length);
     debugPrint("Number of Westbound NPCs: " + npc_west_IDs.length);
@@ -125,8 +123,6 @@
         NPCstartPositions_South.push(npcPosition);
         NPCendPositions_South.push(npcPosition);
     });
-
-//    this.clickDownOnEntity = function (entityID, mouseEvent) { 
 
     function startStopNPCs (entityID) {
         var i;
