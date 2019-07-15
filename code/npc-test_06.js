@@ -62,7 +62,7 @@
     var NPCendPositions_North = [];
     var NPCendPositions_South = [];
     
-    this.remotelyCallable = ["checkNPCpositions", "resetNPCpositions", "startPosition"];
+    this.remotelyCallable = ["checkNPCpositions", "resetNPCpositions", "startStopNPCs"];
     
     debugPrint("Number of Eastbound NPCs: " + npc_east_IDs.length);
     debugPrint("Number of Westbound NPCs: " + npc_west_IDs.length);
