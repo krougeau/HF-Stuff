@@ -1,4 +1,5 @@
 (function () {
+    debugPrint("Script loaded");
     var DEBUGGING = true;
     var _this = this;
     var SEARCH_RADIUS = 10000.0;
@@ -326,7 +327,7 @@
 
     function debugPrint(message) {
         if (DEBUGGING) {
-            console.log(message);
+            console.info(message);
         }
     }
 });
