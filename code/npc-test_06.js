@@ -1,6 +1,5 @@
 (function () {    
-    debugPrint("Script loaded");
-var DEBUGGING = true;
+    var DEBUGGING = true;
     var _this = this;
     var SEARCH_RADIUS = 10000.0;
     var NPC_POSITION_MAX_X_VALUE = 20.0;
@@ -68,6 +67,8 @@ var DEBUGGING = true;
     debugPrint("Number of Westbound NPCs: " + npc_west_IDs.length);
     debugPrint("Number of Northbound NPCs: " + npc_north_IDs.length);
     debugPrint("Number of Southbound NPCs: " + npc_south_IDs.length);
+
+    debugPrint("Script loaded");
 
     for (var i = 0; i < npc_east_IDs.length; i++) {
         var currentNPC = npc_east_IDs[i];
@@ -184,7 +185,7 @@ var DEBUGGING = true;
     };
 
     this.preload = function (entityID) {
-//        debugPrint("Script loaded");
+        // debugPrint("Script loaded");
         debugPrint("Preloading Start/Stop Button");
         setEntityColour(entityID, RED);
         started = false;
@@ -331,4 +332,7 @@ var DEBUGGING = true;
             console.info(message);
         }
     }
+
+    return this;
+
 });
