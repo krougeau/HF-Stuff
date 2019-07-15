@@ -368,6 +368,7 @@
 
     function setAnimation(id, animation) {
         Entities.editEntity(id, animation);
+        debugPrint("Animation called.");
     }
 
     function debugPrint(message) {
