@@ -196,6 +196,7 @@
     };
 
     function resetNPCpositions (entityID) {
+        var i;
         for (i = 0; i < npc_east_IDs.length; i++) {
             Entities.editEntity(npc_east_IDs[i], {
                 velocity: Vec3.ZERO
@@ -239,10 +240,11 @@
 
    _this.intervalID = Script.setInterval(function() {
        checkNPCpositions();
-       debugPrint("Checking positions.");
+       // debugPrint("Checking positions.");
     }, 500);
 
     function checkNPCpositions() {
+        var i;
         for (i = 0; i < npc_east_IDs.length; i++) {
             var NPCcurrentXvalue = Entities.getEntityProperties(npc_east_IDs[i], "position").position.x;
             if (NPCcurrentXvalue <= -NPC_POSITION_MAX_X_VALUE) {
