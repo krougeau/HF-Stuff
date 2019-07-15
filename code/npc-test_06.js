@@ -1,5 +1,4 @@
-(function () {
-    debugPrint("Script loaded");
+(function () {    
     var DEBUGGING = true;
     var _this = this;
     var SEARCH_RADIUS = 10000.0;
@@ -184,6 +183,7 @@
     };
 
     this.preload = function (entityID) {
+        debugPrint("Script loaded");
         debugPrint("Preloading Start/Stop Button");
         setEntityColour(entityID, RED);
         started = false;
