@@ -127,6 +127,7 @@
     });
 
     function startStopNPCs (params) {
+        debugPrint("START STOP WAS CALLED");
         entityID = params[0];
         var i;
         if (started) {
