@@ -1,5 +1,6 @@
 (function () {    
-    var DEBUGGING = true;
+    debugPrint("Script loaded");
+var DEBUGGING = true;
     var _this = this;
     var SEARCH_RADIUS = 10000.0;
     var NPC_POSITION_MAX_X_VALUE = 20.0;
@@ -183,7 +184,7 @@
     };
 
     this.preload = function (entityID) {
-        debugPrint("Script loaded");
+//        debugPrint("Script loaded");
         debugPrint("Preloading Start/Stop Button");
         setEntityColour(entityID, RED);
         started = false;
