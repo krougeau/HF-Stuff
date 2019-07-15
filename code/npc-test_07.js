@@ -17,24 +17,24 @@
         blue: 0
     };
     var NPC_EAST_DEFAULT_VELOCITY = {
-        x: -0.5,
+        x: -0.75,
         y: 0.0,
         z: 0.0
     };
     var NPC_WEST_DEFAULT_VELOCITY = {
-        x: 0.5,
+        x: 0.75,
         y: 0.0,
         z: 0.0
     };
     var NPC_NORTH_DEFAULT_VELOCITY = {
         x: 0.0,
         y: 0.0,
-        z: 0.5
+        z: 0.75
     };
     var NPC_SOUTH_DEFAULT_VELOCITY = {
         x: 0.0,
         y: 0.0,
-        z: -0.5
+        z: -0.75
     };
     var NO_VELOCITY = {
         x: 0.0,
