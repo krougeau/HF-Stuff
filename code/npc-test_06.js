@@ -1,5 +1,6 @@
 (function () {
     var DEBUGGING = true;
+    var _this = this;
     var SEARCH_RADIUS = 10000.0;
     var NPC_POSITION_MAX_X_VALUE = 20.0;
     var NPC_POSITION_MAX_Z_VALUE = 20.0;
@@ -189,7 +190,7 @@
 
     this.unload = function (entityID) {
         debugPrint("Unloading Start/Stop Button");
-        Script.clearInterval(self.intervalID);
+        Script.clearInterval(_this.intervalID);
         setEntityColour(entityID, RED);
         started = false;
     };
@@ -236,7 +237,7 @@
         debugPrint("Reset & stopped.");
     };
 
-   self.intervalID = Script.setInterval(function() {
+   _this.intervalID = Script.setInterval(function() {
        checkNPCpositions();
        debugPrint("Checking positions.");
     }, 500);
