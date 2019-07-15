@@ -63,6 +63,7 @@
     
     this.remotelyCallable = ["checkNPCpositions"];
     this.remotelyCallable = ["resetNPCpositions"];
+    this.remotelyCallable = ["startStopNPCs"];
     
     debugPrint("Number of Eastbound NPCs: " + npc_east_IDs.length);
     debugPrint("Number of Westbound NPCs: " + npc_west_IDs.length);
@@ -125,7 +126,9 @@
         NPCendPositions_South.push(npcPosition);
     });
 
-    this.clickDownOnEntity = function (entityID, mouseEvent) { 
+//    this.clickDownOnEntity = function (entityID, mouseEvent) { 
+
+    function startStopNPCs (entityID) {
         var i;
         if (started) {
             for (i = 0; i < npc_east_IDs.length; i++) {
@@ -240,7 +243,6 @@
 
    _this.intervalID = Script.setInterval(function() {
        checkNPCpositions();
-       // debugPrint("Checking positions.");
     }, 500);
 
     function checkNPCpositions() {
