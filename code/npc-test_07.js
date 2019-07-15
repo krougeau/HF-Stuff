@@ -44,7 +44,7 @@
     var WALKING_ANIMATION = {
         "animation": {
             "url": "https://github.com/krougeau/HF-Stuff/raw/master/nny/Johnny_Walking.fbx",
-            "fps": 45,
+            "fps": 30,
             startFrame: 0,
             "running": true
         }
@@ -53,7 +53,7 @@
     var IDLE_ANIMATION = {
         "animation": {
             "url": "https://github.com/krougeau/HF-Stuff/raw/master/h22/hitc-22_breathing-idle.fbx",
-            "fps": 45,
+            "fps": 30,
             startFrame: 0,
             "running": true
         }
