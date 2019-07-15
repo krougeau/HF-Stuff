@@ -124,7 +124,8 @@
         NPCendPositions_South.push(npcPosition);
     });
 
-    function startStopNPCs (entityID) {
+    function startStopNPCs (params) {
+        entityID = params[0];
         var i;
         if (started) {
             for (i = 0; i < npc_east_IDs.length; i++) {
