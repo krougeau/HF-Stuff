@@ -325,7 +325,7 @@
 
     function debugPrint(message) {
         if (DEBUGGING) {
-            print(message);
+            console.log(message);
         }
     }
 });
