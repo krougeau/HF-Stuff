@@ -126,7 +126,7 @@
         },
         checkNPCpositions: function (id) {
             checkPositions();
-        }
+        }        
     }
 
     debugPrint("Number of Eastbound NPCs: " + npc_east_IDs.length);
@@ -255,6 +255,7 @@
 
     function startStop(id) {
         debugPrint("START STOP WAS CALLED");
+        debugPrint(JSON.stringify(_this));
         var i;
         if (started) {
             for (i = 0; i < npc_east_IDs.length; i++) {
