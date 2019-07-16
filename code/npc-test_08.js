@@ -1,7 +1,7 @@
 (function () {
     var DEBUGGING = true;
     var _this = this;
-    var SEARCH_RADIUS = 100000.0;
+    var SEARCH_RADIUS = 10000.0;
     var NPC_POSITION_MAX_X_VALUE = 20.0;
     var NPC_POSITION_MAX_Z_VALUE = 20.0;
     var CASE_SENSITIVE = true;
