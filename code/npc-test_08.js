@@ -588,6 +588,7 @@
             console.info(message);
         }
     }
-
+    
+    debugPrint(JSON.stringify(_this));
     return new NPC_Controller();
 });
