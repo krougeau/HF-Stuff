@@ -256,55 +256,54 @@
     function startStop(id) {
         debugPrint("START STOP WAS CALLED");
         debugPrint(JSON.stringify(_this));
-        var i;
         if (started) {
-            for (i = 0; i < npc_east_IDs.length; i++) {
+            for (var i = 0; i < npc_east_IDs.length; i++) {
                 var currentNPC = npc_east_IDs[i];
                 setNPCvelocity(currentNPC, STATIONARY);
                 NPCendPositions_East[i] = getNPCposition(currentNPC);
                 setAnimation(currentNPC, IDLE_ANIMATION);
                 debugPrint("East NPC #" + i + " stopped at " + JSON.stringify(NPCendPositions_East[i]));
             }
-            for (i = 0; i < npc_west_IDs.length; i++) {
+            for (var i = 0; i < npc_west_IDs.length; i++) {
                 var currentNPC = npc_west_IDs[i];
                 setNPCvelocity(currentNPC, STATIONARY);
                 NPCendPositions_West[i] = getNPCposition(currentNPC);
                 setAnimation(currentNPC, IDLE_ANIMATION);
                 debugPrint("West NPC #" + i + " stopped at " + JSON.stringify(NPCendPositions_West[i]));
             }
-            for (i = 0; i < npc_north_IDs.length; i++) {
+            for (var i = 0; i < npc_north_IDs.length; i++) {
                 var currentNPC = npc_north_IDs[i];
                 setNPCvelocity(currentNPC, STATIONARY);
                 NPCendPositions_North[i] = getNPCposition(currentNPC);
                 setAnimation(currentNPC, IDLE_ANIMATION);
                 debugPrint("North NPC #" + i + " stopped at " + JSON.stringify(NPCendPositions_North[i]));
             }
-            for (i = 0; i < npc_south_IDs.length; i++) {
+            for (var i = 0; i < npc_south_IDs.length; i++) {
                 var currentNPC = npc_south_IDs[i];
                 setNPCvelocity(currentNPC, STATIONARY);
                 NPCendPositions_South[i] = getNPCposition(currentNPC);
                 setAnimation(currentNPC, IDLE_ANIMATION);
                 debugPrint("South NPC #" + i + " stopped at " + JSON.stringify(NPCendPositions_South[i]));
             }
-            for (i = 0; i < car_east_IDs.length; i++) {
+            for (var i = 0; i < car_east_IDs.length; i++) {
                 var currentNPC = car_east_IDs[i];
                 setNPCvelocity(currentNPC, STATIONARY);
                 CARendPositions_East[i] = getNPCposition(currentNPC);
                 debugPrint("East Car #" + i + " stopped at " + JSON.stringify(CARendPositions_East[i]));
             }
-            for (i = 0; i < car_west_IDs.length; i++) {
+            for (var i = 0; i < car_west_IDs.length; i++) {
                 var currentNPC = car_west_IDs[i];
                 setNPCvelocity(currentNPC, STATIONARY);
                 CARendPositions_West[i] = getNPCposition(currentNPC);
                 debugPrint("West Car #" + i + " stopped at " + JSON.stringify(CARendPositions_West[i]));
             }
-            for (i = 0; i < car_north_IDs.length; i++) {
+            for (var i = 0; i < car_north_IDs.length; i++) {
                 var currentNPC = car_north_IDs[i];
                 setNPCvelocity(currentNPC, STATIONARY);
                 CARendPositions_North[i] = getNPCposition(currentNPC);
                 debugPrint("North Car #" + i + " stopped at " + JSON.stringify(CARendPositions_North[i]));
             }
-            for (i = 0; i < car_south_IDs.length; i++) {
+            for (var i = 0; i < car_south_IDs.length; i++) {
                 var currentNPC = car_south_IDs[i];
                 setNPCvelocity(currentNPC, STATIONARY);
                 CARendPositions_South[i] = getNPCposition(currentNPC);
@@ -314,53 +313,53 @@
             started = false;
             debugPrint("Stopped.");
         } else {
-            for (i = 0; i < npc_east_IDs.length; i++) {
+            for (var i = 0; i < npc_east_IDs.length; i++) {
                 var currentNPC = npc_east_IDs[i];
                 setNPCvelocity(currentNPC, NPC_EAST_DEFAULT_VELOCITY);
                 var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
                 setAnimation(currentNPC, WALKING_ANIMATION);
                 debugPrint("East NPC #" + i + " is moving at velocity " + currentVelocity);
             }
-            for (i = 0; i < npc_west_IDs.length; i++) {
+            for (var i = 0; i < npc_west_IDs.length; i++) {
                 var currentNPC = npc_west_IDs[i];
                 setNPCvelocity(currentNPC, NPC_WEST_DEFAULT_VELOCITY);
                 var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
                 setAnimation(currentNPC, WALKING_ANIMATION);
                 debugPrint("West NPC #" + i + " is moving at velocity " + currentVelocity);
             }
-            for (i = 0; i < npc_north_IDs.length; i++) {
+            for (var i = 0; i < npc_north_IDs.length; i++) {
                 var currentNPC = npc_north_IDs[i];
                 setNPCvelocity(currentNPC, NPC_NORTH_DEFAULT_VELOCITY);
                 var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
                 setAnimation(currentNPC, WALKING_ANIMATION);
                 debugPrint("North NPC #" + i + " is moving at velocity " + currentVelocity);
             }
-            for (i = 0; i < npc_south_IDs.length; i++) {
+            for (var i = 0; i < npc_south_IDs.length; i++) {
                 var currentNPC = npc_south_IDs[i];
                 setNPCvelocity(currentNPC, NPC_SOUTH_DEFAULT_VELOCITY);
                 var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
                 setAnimation(currentNPC, WALKING_ANIMATION);
                 debugPrint("South NPC #" + i + " is moving at velocity " + currentVelocity);
             }
-            for (i = 0; i < car_east_IDs.length; i++) {
+            for (var i = 0; i < car_east_IDs.length; i++) {
                 var currentNPC = car_east_IDs[i];
                 setNPCvelocity(currentNPC, CAR_EAST_DEFAULT_VELOCITY);
                 var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
                 debugPrint("East NPC #" + i + " is moving at velocity " + currentVelocity);
             }
-            for (i = 0; i < car_west_IDs.length; i++) {
+            for (var i = 0; i < car_west_IDs.length; i++) {
                 var currentNPC = car_west_IDs[i];
                 setNPCvelocity(currentNPC, CAR_WEST_DEFAULT_VELOCITY);
                 var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
                 debugPrint("West NPC #" + i + " is moving at velocity " + currentVelocity);
             }
-            for (i = 0; i < car_north_IDs.length; i++) {
+            for (var i = 0; i < car_north_IDs.length; i++) {
                 var currentNPC = car_north_IDs[i];
                 setNPCvelocity(currentNPC, CAR_NORTH_DEFAULT_VELOCITY);
                 var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
                 debugPrint("North NPC #" + i + " is moving at velocity " + currentVelocity);
             }
-            for (i = 0; i < car_south_IDs.length; i++) {
+            for (var i = 0; i < car_south_IDs.length; i++) {
                 var currentNPC = car_south_IDs[i];
                 setNPCvelocity(currentNPC, CAR_SOUTH_DEFAULT_VELOCITY);
                 var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
@@ -386,8 +385,7 @@
     };
 
     function resetPositions(entityID) {
-        var i;        
-        for (i = 0; i < npc_east_IDs.length; i++) {
+        for (var i = 0; i < npc_east_IDs.length; i++) {
             Entities.editEntity(npc_east_IDs[i], {
                 velocity: Vec3.ZERO
             });
@@ -397,7 +395,7 @@
             setAnimation(npc_east_IDs[i], IDLE_ANIMATION);
             debugPrint("East NPC #" + i + " returned to " + JSON.stringify(NPCstartPositions_East[i]));
         }
-        for (i = 0; i < npc_west_IDs.length; i++) {
+        for (var i = 0; i < npc_west_IDs.length; i++) {
             Entities.editEntity(npc_west_IDs[i], {
                 velocity: Vec3.ZERO
             });
@@ -407,7 +405,7 @@
             setAnimation(npc_west_IDs[i], IDLE_ANIMATION);
             debugPrint("West NPC #" + i + " returned to " + JSON.stringify(NPCstartPositions_West[i]));
         }
-        for (i = 0; i < npc_north_IDs.length; i++) {
+        for (var i = 0; i < npc_north_IDs.length; i++) {
             Entities.editEntity(npc_north_IDs[i], {
                 velocity: Vec3.ZERO
             });
@@ -417,7 +415,7 @@
             setAnimation(npc_north_IDs[i], IDLE_ANIMATION);
             debugPrint("North NPC #" + i + " returned to " + JSON.stringify(NPCstartPositions_North[i]));
         }
-        for (i = 0; i < npc_south_IDs.length; i++) {
+        for (var i = 0; i < npc_south_IDs.length; i++) {
             Entities.editEntity(npc_south_IDs[i], {
                 velocity: Vec3.ZERO
             });
@@ -427,7 +425,7 @@
             setAnimation(npc_south_IDs[i], IDLE_ANIMATION);
             debugPrint("South NPC #" + i + " returned to " + JSON.stringify(NPCstartPositions_South[i]));
         }
-        for (i = 0; i < car_east_IDs.length; i++) {
+        for (var i = 0; i < car_east_IDs.length; i++) {
             Entities.editEntity(car_east_IDs[i], {
                 velocity: Vec3.ZERO
             });
@@ -436,7 +434,7 @@
             });
             debugPrint("East Car #" + i + " returned to " + JSON.stringify(CARstartPositions_East[i]));
         }
-        for (i = 0; i < car_west_IDs.length; i++) {
+        for (var i = 0; i < car_west_IDs.length; i++) {
             Entities.editEntity(car_west_IDs[i], {
                 velocity: Vec3.ZERO
             });
@@ -445,7 +443,7 @@
             });
             debugPrint("West Car #" + i + " returned to " + JSON.stringify(CARstartPositions_West[i]));
         }
-        for (i = 0; i < car_north_IDs.length; i++) {
+        for (var i = 0; i < car_north_IDs.length; i++) {
             Entities.editEntity(car_north_IDs[i], {
                 velocity: Vec3.ZERO
             });
@@ -454,7 +452,7 @@
             });
             debugPrint("North Car #" + i + " returned to " + JSON.stringify(CARstartPositions_North[i]));
         }
-        for (i = 0; i < car_south_IDs.length; i++) {
+        for (var i = 0; i < car_south_IDs.length; i++) {
             Entities.editEntity(car_south_IDs[i], {
                 velocity: Vec3.ZERO
             });
@@ -470,53 +468,52 @@
 
     _this.intervalID = Script.setInterval(function () {
         checkPositions();
-    }, 500);
+    }, 1000);
 
     function checkPositions() {
-        var i;
-        for (i = 0; i < npc_east_IDs.length; i++) {
+        for (var i = 0; i < npc_east_IDs.length; i++) {
             var NPCcurrentXvalue = Entities.getEntityProperties(npc_east_IDs[i], "position").position.x;
             if (NPCcurrentXvalue <= -NPC_POSITION_MAX_X_VALUE) {
                 sendNPCtoStartPosition(npc_east_IDs[i], NPCstartPositions_East[i], "east");
             }
         }
-        for (i = 0; i < npc_west_IDs.length; i++) {
+        for (var i = 0; i < npc_west_IDs.length; i++) {
             var NPCcurrentXvalue = Entities.getEntityProperties(npc_west_IDs[i], "position").position.x;
             if (NPCcurrentXvalue >= NPC_POSITION_MAX_X_VALUE) {
                 sendNPCtoStartPosition(npc_west_IDs[i], NPCstartPositions_West[i], "west");
             }
         }
-        for (i = 0; i < npc_north_IDs.length; i++) {
+        for (var i = 0; i < npc_north_IDs.length; i++) {
             var NPCcurrentZvalue = Entities.getEntityProperties(npc_north_IDs[i], "position").position.z;
             if (NPCcurrentZvalue >= NPC_POSITION_MAX_Z_VALUE) {
                 sendNPCtoStartPosition(npc_north_IDs[i], NPCstartPositions_North[i], "north");
             }
         }
-        for (i = 0; i < npc_south_IDs.length; i++) {
+        for (var i = 0; i < npc_south_IDs.length; i++) {
             var NPCcurrentZvalue = Entities.getEntityProperties(npc_south_IDs[i], "position").position.z;
             if (NPCcurrentZvalue <= -NPC_POSITION_MAX_Z_VALUE) {
                 sendNPCtoStartPosition(npc_south_IDs[i], NPCstartPositions_South[i], "south");
             }
         }
-        for (i = 0; i < car_east_IDs.length; i++) {
+        for (var i = 0; i < car_east_IDs.length; i++) {
             var NPCcurrentXvalue = Entities.getEntityProperties(car_east_IDs[i], "position").position.x;
             if (NPCcurrentXvalue <= -NPC_POSITION_MAX_X_VALUE) {
                 sendNPCtoStartPosition(car_east_IDs[i], CARstartPositions_East[i], "east");
             }
         }
-        for (i = 0; i < car_west_IDs.length; i++) {
+        for (var i = 0; i < car_west_IDs.length; i++) {
             var NPCcurrentXvalue = Entities.getEntityProperties(car_west_IDs[i], "position").position.x;
             if (NPCcurrentXvalue >= NPC_POSITION_MAX_X_VALUE) {
                 sendNPCtoStartPosition(car_west_IDs[i], CARstartPositions_West[i], "west");
             }
         }
-        for (i = 0; i < car_north_IDs.length; i++) {
+        for (var i = 0; i < car_north_IDs.length; i++) {
             var NPCcurrentZvalue = Entities.getEntityProperties(car_north_IDs[i], "position").position.z;
             if (NPCcurrentZvalue >= NPC_POSITION_MAX_Z_VALUE) {
                 sendNPCtoStartPosition(car_north_IDs[i], CARstartPositions_North[i], "north");
             }
         }
-        for (i = 0; i < car_south_IDs.length; i++) {
+        for (var i = 0; i < car_south_IDs.length; i++) {
             var NPCcurrentZvalue = Entities.getEntityProperties(car_south_IDs[i], "position").position.z;
             if (NPCcurrentZvalue <= -NPC_POSITION_MAX_Z_VALUE) {
                 sendNPCtoStartPosition(car_south_IDs[i], CARstartPositions_South[i], "south");
@@ -588,7 +585,7 @@
             console.info(message);
         }
     }
-    
+
     debugPrint(JSON.stringify(_this));
     return new NPC_Controller();
 });
