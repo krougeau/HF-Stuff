@@ -12,44 +12,44 @@
     var SEARCH_CENTER = Vec3.ZERO;
     var STATIONARY = Vec3.ZERO;
     var NPC_EAST_DEFAULT_VELOCITY = {
-        x: -0.75,
+        x: -1.0,
         y: 0.0,
         z: 0.0
     };
     var NPC_WEST_DEFAULT_VELOCITY = {
-        x: 0.75,
+        x: 1.0,
         y: 0.0,
         z: 0.0
     };
     var NPC_NORTH_DEFAULT_VELOCITY = {
         x: 0.0,
         y: 0.0,
-        z: 0.75
+        z: 1.0
     };
     var NPC_SOUTH_DEFAULT_VELOCITY = {
         x: 0.0,
         y: 0.0,
-        z: -0.75
+        z: -1.0
     };
     var CAR_EAST_DEFAULT_VELOCITY = {
-        x: -2.0,
+        x: -3.0,
         y: 0.0,
         z: 0.0
     };
     var CAR_WEST_DEFAULT_VELOCITY = {
-        x: 2.0,
+        x: 3.0,
         y: 0.0,
         z: 0.0
     };
     var CAR_NORTH_DEFAULT_VELOCITY = {
         x: 0.0,
         y: 0.0,
-        z: 2.0
+        z: 3.0
     };
     var CAR_SOUTH_DEFAULT_VELOCITY = {
         x: 0.0,
         y: 0.0,
-        z: -2.0
+        z: -3.0
     };
     var NO_VELOCITY = {
         x: 0.0,
