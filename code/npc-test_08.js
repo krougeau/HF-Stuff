@@ -1,6 +1,7 @@
 (function () {
     var DEBUGGING = false;
     var _this = this;
+    var _id = "{fb7cdab7-7463-4843-ab8f-975115d6de12}";
     var SEARCH_RADIUS = 10000.0;
     var NPC_POSITION_MAX_X_VALUE = 140.0;
     var NPC_POSITION_MIN_X_VALUE = -200.0;
@@ -129,7 +130,7 @@
         checkNPCpositions: function (id) {
             checkPositions();
         }        
-    }
+    };
 
     debugPrint("Number of Eastbound NPCs: " + npc_east_IDs.length);
     debugPrint("Number of Westbound NPCs: " + npc_west_IDs.length);
@@ -311,7 +312,7 @@
                 CARendPositions_South[i] = getNPCposition(currentNPC);
                 debugPrint("South Car #" + i + " stopped at " + JSON.stringify(CARendPositions_South[i]));
             }
-            setEntityColour(_this, RED);
+            setEntityColour(_id, RED);
             started = false;
             debugPrint("Stopped.");
         } else {
@@ -367,11 +368,11 @@
                 var currentVelocity = JSON.stringify(getNPCvelocity(currentNPC));
                 debugPrint("South NPC #" + i + " is moving at velocity " + currentVelocity);
             }
-            setEntityColour(_this, GREEN);
+            setEntityColour(_id, GREEN);
             started = true;
             debugPrint("Started.");
         }
-    };
+    }
 
     this.preload = function (entityID) {
         debugPrint("Preloading Start/Stop Button");
