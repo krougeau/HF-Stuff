@@ -1,5 +1,5 @@
 (function () {
-    var DEBUGGING = true;
+    var DEBUGGING = false;
     var _this = this;
     var SEARCH_RADIUS = 10000.0;
     var NPC_POSITION_MAX_X_VALUE = 140.0;
@@ -475,7 +475,7 @@
     function checkPositions() {
         for (var i = 0; i < npc_east_IDs.length; i++) {
             var NPCcurrentXvalue = Entities.getEntityProperties(npc_east_IDs[i], "position").position.x;
-            if (NPCcurrentXvalue <= -NPC_POSITION_MAX_X_VALUE) {
+            if (NPCcurrentXvalue <= NPC_POSITION_MIN_X_VALUE) {
                 sendNPCtoStartPosition(npc_east_IDs[i], NPCstartPositions_East[i], "east");
             }
         }
@@ -493,13 +493,13 @@
         }
         for (var i = 0; i < npc_south_IDs.length; i++) {
             var NPCcurrentZvalue = Entities.getEntityProperties(npc_south_IDs[i], "position").position.z;
-            if (NPCcurrentZvalue <= -NPC_POSITION_MAX_Z_VALUE) {
+            if (NPCcurrentZvalue <= NPC_POSITION_MIN_Z_VALUE) {
                 sendNPCtoStartPosition(npc_south_IDs[i], NPCstartPositions_South[i], "south");
             }
         }
         for (var i = 0; i < car_east_IDs.length; i++) {
             var NPCcurrentXvalue = Entities.getEntityProperties(car_east_IDs[i], "position").position.x;
-            if (NPCcurrentXvalue <= -NPC_POSITION_MAX_X_VALUE) {
+            if (NPCcurrentXvalue <= NPC_POSITION_MIN_X_VALUE) {
                 sendNPCtoStartPosition(car_east_IDs[i], CARstartPositions_East[i], "east");
             }
         }
@@ -517,7 +517,7 @@
         }
         for (var i = 0; i < car_south_IDs.length; i++) {
             var NPCcurrentZvalue = Entities.getEntityProperties(car_south_IDs[i], "position").position.z;
-            if (NPCcurrentZvalue <= -NPC_POSITION_MAX_Z_VALUE) {
+            if (NPCcurrentZvalue <= NPC_POSITION_MIN_Z_VALUE) {
                 sendNPCtoStartPosition(car_south_IDs[i], CARstartPositions_South[i], "south");
             }
         }
