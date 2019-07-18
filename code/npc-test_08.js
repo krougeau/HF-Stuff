@@ -2,8 +2,8 @@
     var DEBUGGING = true;
     var _this = this;
     var SEARCH_RADIUS = 10000.0;
-    var NPC_POSITION_MAX_X_VALUE = 20.0;
-    var NPC_POSITION_MIN_X_VALUE = 20.0;
+    var NPC_POSITION_MAX_X_VALUE = 140.0;
+    var NPC_POSITION_MIN_X_VALUE = -200.0;
     var NPC_POSITION_MAX_Z_VALUE = 300.0;
     var NPC_POSITION_MIN_Z_VALUE = -160.0;
     var CASE_SENSITIVE = true;
