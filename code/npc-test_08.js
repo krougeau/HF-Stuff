@@ -181,6 +181,10 @@
         CARstartPositions_East.push(getNPCposition(currentNPC));
         CARendPositions_East.push(getNPCposition(currentNPC));
         var startPosition = JSON.stringify(CARstartPositions_East[i]);
+        Entities.editEntity(car_east_IDs[i], {
+                damping: 0.0,
+                angularDamping: 0.0
+        });
         debugPrint("East Car #" + i + " started at " + startPosition);
     }
 
@@ -189,6 +193,10 @@
         CARstartPositions_West.push(getNPCposition(currentNPC));
         CARendPositions_West.push(getNPCposition(currentNPC));
         var startPosition = JSON.stringify(CARstartPositions_West[i]);
+        Entities.editEntity(car_west_IDs[i], {
+            damping: 0.0,
+            angularDamping: 0.0
+        });
         debugPrint("West Car #" + i + " started at " + startPosition);
     }
 
@@ -197,6 +205,10 @@
         CARstartPositions_North.push(getNPCposition(currentNPC));
         CARendPositions_North.push(getNPCposition(currentNPC));
         var startPosition = JSON.stringify(CARstartPositions_North[i]);
+        Entities.editEntity(car_north_IDs[i], {
+            damping: 0.0,
+            angularDamping: 0.0
+        });
         debugPrint("North Car #" + i + " started at " + startPosition);
     }
 
@@ -205,6 +217,10 @@
         CARstartPositions_South.push(getNPCposition(currentNPC));
         CARendPositions_South.push(getNPCposition(currentNPC));
         var startPosition = JSON.stringify(CARstartPositions_South[i]);
+        Entities.editEntity(car_south_IDs[i], {
+            damping: 0.0,
+            angularDamping: 0.0
+        });
         debugPrint("South Car #" + i + " started at " + startPosition);
     }
 
