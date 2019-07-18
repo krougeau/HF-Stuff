@@ -3,7 +3,9 @@
     var _this = this;
     var SEARCH_RADIUS = 10000.0;
     var NPC_POSITION_MAX_X_VALUE = 20.0;
-    var NPC_POSITION_MAX_Z_VALUE = 20.0;
+    var NPC_POSITION_MIN_X_VALUE = 20.0;
+    var NPC_POSITION_MAX_Z_VALUE = 300.0;
+    var NPC_POSITION_MIN_Z_VALUE = -160.0;
     var CASE_SENSITIVE = true;
     var started = false;
     var SEARCH_CENTER = Vec3.ZERO;
@@ -531,7 +533,7 @@
         }
         if (direction === "west") {
             var position = {
-                x: -NPC_POSITION_MAX_X_VALUE,
+                x: NPC_POSITION_MIN_X_VALUE,
                 y: startPosition.y,
                 z: startPosition.z
             };
@@ -540,7 +542,7 @@
             var position = {
                 x: startPosition.x,
                 y: startPosition.y,
-                z: -NPC_POSITION_MAX_Z_VALUE
+                z: NPC_POSITION_MIN_Z_VALUE
             };
         }
         if (direction === "south") {
