@@ -14,9 +14,7 @@
     };
     this.clickDownOnEntity = function (entityID, mouseEvent) {
             // print("RESETTING NPCs");
-        Entities.editEntity(id, {
-            color: RED
-        });
+        Entities.editEntity(controllerIDs[0], { color: RED });
         Entities.callEntityServerMethod(controllerIDs[0], "resetNPCpositions");       
         };
     
