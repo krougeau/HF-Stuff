@@ -11,16 +11,6 @@
     var NPC_SPEED = 1.25;
     var CAR_SPEED = 4.0;
     var i;
-    var RED = {
-        red: 255,
-        green: 0,
-        blue: 0
-    };
-    var GREEN = {
-        red: 0,
-        green: 255,
-        blue: 0
-    };
 
     var npc_east_IDs = Entities.findEntitiesByName("NPC_East", SEARCH_CENTER, SEARCH_RADIUS, !CASE_SENSITIVE);
     var npc_west_IDs = Entities.findEntitiesByName("NPC_West", SEARCH_CENTER, SEARCH_RADIUS, !CASE_SENSITIVE);
@@ -209,12 +199,10 @@
 
     function startStop(id) {
         debugPrint("START STOP WAS CALLED");
-        if (started) {            
-            setEntityColour(id, RED);
+        if (started) {
             started = false;
             debugPrint("Stopped.");
-        } else {            
-            setEntityColour(id, GREEN);
+        } else {
             started = true;
             debugPrint("Started.");
         }
@@ -222,14 +210,12 @@
 
     this.preload = function (entityID) {
         debugPrint("Preloading Start/Stop Button");
-        setEntityColour(entityID, RED);
         started = false;
     };
 
     this.unload = function (entityID) {
         debugPrint("Unloading Start/Stop Button");
         Script.clearInterval(entityID.intervalID);
-        setEntityColour(entityID, RED);
         started = false;
     };
 
@@ -464,12 +450,6 @@
         }
         Entities.editEntity(npcID, {
             position: position
-        });
-    }
-
-    function setEntityColour(id, colour) {
-        Entities.editEntity(id, {
-            color: colour
         });
     }
 
