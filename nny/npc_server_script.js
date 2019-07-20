@@ -1,5 +1,5 @@
 (function () {
-    var DEBUGGING = false;
+    var DEBUGGING = true;
     var SEARCH_RADIUS = 10000.0;
     var NPC_POSITION_MAX_X_VALUE = 140.0;
     var NPC_POSITION_MIN_X_VALUE = -200.0;
@@ -222,6 +222,7 @@
     function resetPositions(entityID) {
         setEntityColour(entityID, RED);
         started = false;
+        debugPrint("RESET CLICK RECEIVED BY SERVER SCRIPT");
         for (i = 0; i < npc_east_IDs.length; i++) {
             Entities.editEntity(npc_east_IDs[i], {
                 position: NPCstartPositions_East[i]
