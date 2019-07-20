@@ -220,9 +220,7 @@
     };
 
     function resetPositions(entityID) {
-        setEntityColour(entityID, RED);
         started = false;
-        debugPrint("RESET CLICK RECEIVED BY SERVER SCRIPT");
         for (i = 0; i < npc_east_IDs.length; i++) {
             Entities.editEntity(npc_east_IDs[i], {
                 position: NPCstartPositions_East[i]
