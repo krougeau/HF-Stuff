@@ -1,5 +1,5 @@
 (function () {
-    var DEBUGGING = false;
+    var DEBUGGING = true;
     var SEARCH_RADIUS = 10000.0;
     var NPC_POSITION_MAX_X_VALUE = 140.0;
     var NPC_POSITION_MIN_X_VALUE = -200.0;
@@ -8,8 +8,8 @@
     var CASE_SENSITIVE = true;
     var started = false;
     var SEARCH_CENTER = Vec3.ZERO;
-    var NPC_SPEED = 2.0;
-    var CAR_SPEED = 5.0;
+    var NPC_SPEED = 1.0;
+    var CAR_SPEED = 4.0;
     var i;
     var RED = {
         red: 255,
@@ -294,6 +294,7 @@
     var update = function (deltaTime) {
         if(started) {
             for (i = 0; i < npc_east_IDs.length; i++) {
+                setAnimation(npc_east_IDs[i], WALKING_ANIMATION);
                 var NPCcurrentXvalue = Entities.getEntityProperties(npc_east_IDs[i], "position").position.x;
                 if (NPCcurrentXvalue <= NPC_POSITION_MIN_X_VALUE) {
                     sendNPCtoStartPosition(npc_east_IDs[i], NPCstartPositions_East[i], "east");
@@ -309,6 +310,7 @@
                 }
             }
             for (i = 0; i < npc_west_IDs.length; i++) {
+                setAnimation(npc_west_IDs[i], WALKING_ANIMATION);
                 var NPCcurrentXvalue = Entities.getEntityProperties(npc_west_IDs[i], "position").position.x;
                 if (NPCcurrentXvalue >= NPC_POSITION_MAX_X_VALUE) {
                     sendNPCtoStartPosition(npc_west_IDs[i], NPCstartPositions_West[i], "west");
@@ -324,6 +326,7 @@
                 }
             }
             for (i = 0; i < npc_north_IDs.length; i++) {
+                setAnimation(npc_north_IDs[i], WALKING_ANIMATION);
                 var NPCcurrentZvalue = Entities.getEntityProperties(npc_north_IDs[i], "position").position.z;
                 if (NPCcurrentZvalue >= NPC_POSITION_MAX_Z_VALUE) {
                     sendNPCtoStartPosition(npc_north_IDs[i], NPCstartPositions_North[i], "north");
@@ -339,6 +342,7 @@
                 }
             }
             for (i = 0; i < npc_south_IDs.length; i++) {
+                setAnimation(npc_south_IDs[i], WALKING_ANIMATION);
                 var NPCcurrentZvalue = Entities.getEntityProperties(npc_south_IDs[i], "position").position.z;
                 if (NPCcurrentZvalue <= NPC_POSITION_MIN_Z_VALUE) {
                     sendNPCtoStartPosition(npc_south_IDs[i], NPCstartPositions_South[i], "south");
