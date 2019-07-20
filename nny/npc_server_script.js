@@ -332,7 +332,7 @@
                     sendNPCtoStartPosition(npc_north_IDs[i], NPCstartPositions_North[i], "north");
                 } else {
                     newPosition = {
-                        x: Entities.getEntityProperties(npc_north_IDs[i], "position").position.z,
+                        x: Entities.getEntityProperties(npc_north_IDs[i], "position").position.x,
                         y: Entities.getEntityProperties(npc_north_IDs[i], "position").position.y,
                         z: Entities.getEntityProperties(npc_north_IDs[i], "position").position.z + (NPC_SPEED * deltaTime)
                     }                
@@ -348,7 +348,7 @@
                     sendNPCtoStartPosition(npc_south_IDs[i], NPCstartPositions_South[i], "south");
                 } else {
                     newPosition = {
-                        x: Entities.getEntityProperties(npc_south_IDs[i], "position").position.z,
+                        x: Entities.getEntityProperties(npc_south_IDs[i], "position").position.x,
                         y: Entities.getEntityProperties(npc_south_IDs[i], "position").position.y,
                         z: Entities.getEntityProperties(npc_south_IDs[i], "position").position.z - (NPC_SPEED * deltaTime)
                     }                
@@ -393,7 +393,7 @@
                     sendNPCtoStartPosition(car_north_IDs[i], CARstartPositions_North[i], "north");
                 } else {
                     newPosition = {
-                        x: Entities.getEntityProperties(car_north_IDs[i], "position").position.z,
+                        x: Entities.getEntityProperties(car_north_IDs[i], "position").position.x,
                         y: Entities.getEntityProperties(car_north_IDs[i], "position").position.y,
                         z: Entities.getEntityProperties(car_north_IDs[i], "position").position.z + (CAR_SPEED * deltaTime)
                     }                
@@ -408,7 +408,7 @@
                     sendNPCtoStartPosition(car_south_IDs[i], CARstartPositions_South[i], "south");
                 } else {
                     newPosition = {
-                        x: Entities.getEntityProperties(car_south_IDs[i], "position").position.z,
+                        x: Entities.getEntityProperties(car_south_IDs[i], "position").position.x,
                         y: Entities.getEntityProperties(car_south_IDs[i], "position").position.y,
                         z: Entities.getEntityProperties(car_south_IDs[i], "position").position.z - (CAR_SPEED * deltaTime)
                     }                
@@ -416,6 +416,19 @@
                         position: newPosition
                     });
                 }
+            }
+        } else {
+            for (i = 0; i < npc_east_IDs.length; i++) {
+                setAnimation(npc_east_IDs[i], IDLE_ANIMATION);
+            }
+            for (i = 0; i < npc_west_IDs.length; i++) {
+                setAnimation(npc_west_IDs[i], IDLE_ANIMATION);
+            }
+            for (i = 0; i < npc_north_IDs.length; i++) {
+                setAnimation(npc_north_IDs[i], IDLE_ANIMATION);
+            }
+            for (i = 0; i < npc_south_IDs.length; i++) {
+                setAnimation(npc_south_IDs[i], IDLE_ANIMATION);
             }
         }
     }
