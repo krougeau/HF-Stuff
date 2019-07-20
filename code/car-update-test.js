@@ -9,20 +9,20 @@
         if(!started) {
             started = true;
             print("Started");
-            print("X = " + Entities.getEntityProperties(entityID, "position").position.x);
+            print("X = " + Entities.getEntityProperties(_id, "position").position.x);
         } else {
             started = false;
             print("Stopped");
-            print("X = " + Entities.getEntityProperties(entityID, "position").position.x);
+            print("X = " + Entities.getEntityProperties(_id, "position").position.x);
         }
     };
     
     var update = function (deltaTime) {
         if(started){
             newPosition = {
-                x: Entities.getEntityProperties(entityID, "position").position.x + (0.25 * deltaTime),
-                y: Entities.getEntityProperties(entityID, "position").position.y,
-                z: Entities.getEntityProperties(entityID, "position").position.z
+                x: Entities.getEntityProperties(_id, "position").position.x + (0.25 * deltaTime),
+                y: Entities.getEntityProperties(_id, "position").position.y,
+                z: Entities.getEntityProperties(_id, "position").position.z
             }
             Entities.editEntity(_id, {
                 position: newPosition
