@@ -24,11 +24,19 @@
     
     var update = function (deltaTime) {
         if(started){
-            newPosition = {
-                x: Entities.getEntityProperties(_id, "position").position.x + (speed * deltaTime),
-                y: Entities.getEntityProperties(_id, "position").position.y,
-                z: Entities.getEntityProperties(_id, "position").position.z
-            }
+            if(Entities.getEntityProperties(_id, "position").position.x >= NPC_POSITION_MAX_X_VALUE){
+                newPosition = {
+                    x: NPC_POSITION_MIN_X_VALUE,
+                    y: Entities.getEntityProperties(_id, "position").position.y,
+                    z: Entities.getEntityProperties(_id, "position").position.z
+                }
+            } else {
+                newPosition = {
+                    x: Entities.getEntityProperties(_id, "position").position.x + (speed * deltaTime),
+                    y: Entities.getEntityProperties(_id, "position").position.y,
+                    z: Entities.getEntityProperties(_id, "position").position.z
+                }
+            }        
             Entities.editEntity(_id, {
                 position: newPosition
             });
