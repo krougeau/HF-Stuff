@@ -1,5 +1,5 @@
 (function () {
-    var DEBUGGING = true;
+    var DEBUGGING = false;
     var SEARCH_RADIUS = 10000.0;
     var NPC_POSITION_MAX_X_VALUE = 140.0;
     var NPC_POSITION_MIN_X_VALUE = -200.0;
