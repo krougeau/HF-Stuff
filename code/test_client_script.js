@@ -2,7 +2,7 @@
 
     this.clickDownOnEntity = function (entityID) {
         print("Clickity click!!!!!!");
-        Entities.callEntityServerMethod(entityID, "startStop");
+        Entities.callEntityServerMethod(entityID, "startStopNPCs");
     };
 
 });
