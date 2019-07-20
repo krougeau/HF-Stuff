@@ -426,7 +426,7 @@
         }
         if (direction === "west") {
             var position = {
-                x: -NPC_POSITION_MAX_X_VALUE,
+                x: NPC_POSITION_MIN_X_VALUE,
                 y: startPosition.y,
                 z: startPosition.z
             };
@@ -435,7 +435,7 @@
             var position = {
                 x: startPosition.x,
                 y: startPosition.y,
-                z: -NPC_POSITION_MAX_Z_VALUE
+                z: NPC_POSITION_MIN_Z_VALUE
             };
         }
         if (direction === "south") {
