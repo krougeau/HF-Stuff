@@ -2,6 +2,7 @@
 
     var started = false;
     var _id;
+    var newPosition;
     
     this.clickDownOnEntity = function (entityID, mouseEvent) {
         _id = entityID;
@@ -18,9 +19,14 @@
     
     var update = function (deltaTime) {
         if(started){
-            // handle movement
-            Entities.editEntity(_id, "position").position.x = Entities.getEntityProperties(_id, "position").position.x + (0.5 * deltaTime);
-            // print("Object should be in motion.");
+            newPosition = {
+                x: Entities.getEntityProperties(entityID, "position").position.x + (0.25 * deltaTime),
+                y: Entities.getEntityProperties(entityID, "position").position.y,
+                z: Entities.getEntityProperties(entityID, "position").position.z
+            }
+            Entities.editEntity(_id, {
+                position: newPosition
+            });
         } else {
             // do nothing
         }
