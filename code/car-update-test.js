@@ -2,7 +2,6 @@
 
     var started = false;
     var _id;
-    print(JSON.stringify(_this));
     
     this.clickDownOnEntity = function (entityID, mouseEvent) {
         _id = entityID;
