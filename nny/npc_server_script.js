@@ -299,9 +299,9 @@
                     sendNPCtoStartPosition(npc_east_IDs[i], NPCstartPositions_East[i], "east");
                 } else {
                     newPosition = {
-                        x: Entities.getEntityProperties(_id, "position").position.x - (NPC_SPEED * deltaTime),
-                        y: Entities.getEntityProperties(_id, "position").position.y,
-                        z: Entities.getEntityProperties(_id, "position").position.z
+                        x: Entities.getEntityProperties(npc_east_IDs[i], "position").position.x - (NPC_SPEED * deltaTime),
+                        y: Entities.getEntityProperties(npc_east_IDs[i], "position").position.y,
+                        z: Entities.getEntityProperties(npc_east_IDs[i], "position").position.z
                     }                
                     Entities.editEntity(npc_east_IDs[i], {
                         position: newPosition
@@ -314,9 +314,9 @@
                     sendNPCtoStartPosition(npc_west_IDs[i], NPCstartPositions_West[i], "west");
                 } else {
                     newPosition = {
-                        x: Entities.getEntityProperties(_id, "position").position.x + (NPC_SPEED * deltaTime),
-                        y: Entities.getEntityProperties(_id, "position").position.y,
-                        z: Entities.getEntityProperties(_id, "position").position.z
+                        x: Entities.getEntityProperties(npc_west_IDs[i], "position").position.x + (NPC_SPEED * deltaTime),
+                        y: Entities.getEntityProperties(npc_west_IDs[i], "position").position.y,
+                        z: Entities.getEntityProperties(npc_west_IDs[i], "position").position.z
                     }                
                     Entities.editEntity(npc_west_IDs[i], {
                         position: newPosition
@@ -329,9 +329,9 @@
                     sendNPCtoStartPosition(npc_north_IDs[i], NPCstartPositions_North[i], "north");
                 } else {
                     newPosition = {
-                        x: Entities.getEntityProperties(_id, "position").position.z,
-                        y: Entities.getEntityProperties(_id, "position").position.y,
-                        z: Entities.getEntityProperties(_id, "position").position.z + (NPC_SPEED * deltaTime)
+                        x: Entities.getEntityProperties(npc_north_IDs[i], "position").position.z,
+                        y: Entities.getEntityProperties(npc_north_IDs[i], "position").position.y,
+                        z: Entities.getEntityProperties(npc_north_IDs[i], "position").position.z + (NPC_SPEED * deltaTime)
                     }                
                     Entities.editEntity(npc_north_IDs[i], {
                         position: newPosition
@@ -344,9 +344,9 @@
                     sendNPCtoStartPosition(npc_south_IDs[i], NPCstartPositions_South[i], "south");
                 } else {
                     newPosition = {
-                        x: Entities.getEntityProperties(_id, "position").position.z,
-                        y: Entities.getEntityProperties(_id, "position").position.y,
-                        z: Entities.getEntityProperties(_id, "position").position.z - (NPC_SPEED * deltaTime)
+                        x: Entities.getEntityProperties(npc_south_IDs[i], "position").position.z,
+                        y: Entities.getEntityProperties(npc_south_IDs[i], "position").position.y,
+                        z: Entities.getEntityProperties(npc_south_IDs[i], "position").position.z - (NPC_SPEED * deltaTime)
                     }                
                     Entities.editEntity(npc_south_IDs[i], {
                         position: newPosition
@@ -359,9 +359,9 @@
                     sendNPCtoStartPosition(car_east_IDs[i], CARstartPositions_East[i], "east");
                 } else {
                     newPosition = {
-                        x: Entities.getEntityProperties(_id, "position").position.x - (CAR_SPEED * deltaTime),
-                        y: Entities.getEntityProperties(_id, "position").position.y,
-                        z: Entities.getEntityProperties(_id, "position").position.z
+                        x: Entities.getEntityProperties(car_east_IDs[i], "position").position.x - (CAR_SPEED * deltaTime),
+                        y: Entities.getEntityProperties(car_east_IDs[i], "position").position.y,
+                        z: Entities.getEntityProperties(car_east_IDs[i], "position").position.z
                     }                
                     Entities.editEntity(car_east_IDs[i], {
                         position: newPosition
@@ -374,9 +374,9 @@
                     sendNPCtoStartPosition(car_west_IDs[i], CARstartPositions_West[i], "west");
                 } else {
                     newPosition = {
-                        x: Entities.getEntityProperties(_id, "position").position.x + (CAR_SPEED * deltaTime),
-                        y: Entities.getEntityProperties(_id, "position").position.y,
-                        z: Entities.getEntityProperties(_id, "position").position.z
+                        x: Entities.getEntityProperties(car_west_IDs[i], "position").position.x + (CAR_SPEED * deltaTime),
+                        y: Entities.getEntityProperties(car_west_IDs[i], "position").position.y,
+                        z: Entities.getEntityProperties(car_west_IDs[i], "position").position.z
                     }                
                     Entities.editEntity(car_west_IDs[i], {
                         position: newPosition
@@ -389,9 +389,9 @@
                     sendNPCtoStartPosition(car_north_IDs[i], CARstartPositions_North[i], "north");
                 } else {
                     newPosition = {
-                        x: Entities.getEntityProperties(_id, "position").position.z,
-                        y: Entities.getEntityProperties(_id, "position").position.y,
-                        z: Entities.getEntityProperties(_id, "position").position.z + (CAR_SPEED * deltaTime)
+                        x: Entities.getEntityProperties(car_north_IDs[i], "position").position.z,
+                        y: Entities.getEntityProperties(car_north_IDs[i], "position").position.y,
+                        z: Entities.getEntityProperties(_car_north_IDs[i], "position").position.z + (CAR_SPEED * deltaTime)
                     }                
                     Entities.editEntity(car_north_IDs[i], {
                         position: newPosition
@@ -404,9 +404,9 @@
                     sendNPCtoStartPosition(car_south_IDs[i], CARstartPositions_South[i], "south");
                 } else {
                     newPosition = {
-                        x: Entities.getEntityProperties(_id, "position").position.z,
-                        y: Entities.getEntityProperties(_id, "position").position.y,
-                        z: Entities.getEntityProperties(_id, "position").position.z - (CAR_SPEED * deltaTime)
+                        x: Entities.getEntityProperties(car_south_IDs[i], "position").position.z,
+                        y: Entities.getEntityProperties(car_south_IDs[i], "position").position.y,
+                        z: Entities.getEntityProperties(car_south_IDs[i], "position").position.z - (CAR_SPEED * deltaTime)
                     }                
                     Entities.editEntity(car_south_IDs[i], {
                         position: newPosition
