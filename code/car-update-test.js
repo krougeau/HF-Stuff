@@ -8,12 +8,12 @@
         if(!started) {
             started = true;
             print("Started");
-            print("X = " + Entities.getEntityProperties(_this, "position").position.x);
+            print("X = " + Entities.getEntityProperties(entityID, "position").position.x);
             print("THIS = " = JSON.stringify(_this))
         } else {
             started = false;
             print("Stopped");
-            print("X = " + Entities.getEntityProperties(_this, "position").position.x);
+            print("X = " + Entities.getEntityProperties(entityID, "position").position.x);
             print("THIS = " = JSON.stringify(_this))
         }
     };
