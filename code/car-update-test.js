@@ -3,6 +3,7 @@
     var started = false;
     var _id;
     var newPosition;
+    var speed = 1.0;
     
     this.clickDownOnEntity = function (entityID, mouseEvent) {
         _id = entityID;
@@ -20,7 +21,7 @@
     var update = function (deltaTime) {
         if(started){
             newPosition = {
-                x: Entities.getEntityProperties(_id, "position").position.x + (0.25 * deltaTime),
+                x: Entities.getEntityProperties(_id, "position").position.x + (speed * deltaTime),
                 y: Entities.getEntityProperties(_id, "position").position.y,
                 z: Entities.getEntityProperties(_id, "position").position.z
             }
