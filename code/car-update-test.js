@@ -3,7 +3,7 @@
     var started = false;
     var _id;
     var newPosition;
-    var speed = 1.0;
+    var speed = 3.0;
     
     this.clickDownOnEntity = function (entityID, mouseEvent) {
         _id = entityID;
