@@ -2,7 +2,7 @@
 
     var started = false;
     var _this = this;
-    debugPrint(JSON.stringify(_this));
+    print(JSON.stringify(_this));
     
     this.clickDownOnEntity = function (entityID, mouseEvent) {
         if(!started) {
