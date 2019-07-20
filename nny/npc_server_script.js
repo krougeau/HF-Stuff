@@ -8,8 +8,8 @@
     var CASE_SENSITIVE = true;
     var started = false;
     var SEARCH_CENTER = Vec3.ZERO;
-    var NPC_SPEED = 1.0;
-    var CAR_SPEED = 4.0;
+    var NPC_SPEED = 0.75;
+    var CAR_SPEED = 3.0;
     var i;
     var RED = {
         red: 255,
@@ -395,7 +395,7 @@
                     newPosition = {
                         x: Entities.getEntityProperties(car_north_IDs[i], "position").position.z,
                         y: Entities.getEntityProperties(car_north_IDs[i], "position").position.y,
-                        z: Entities.getEntityProperties(_car_north_IDs[i], "position").position.z + (CAR_SPEED * deltaTime)
+                        z: Entities.getEntityProperties(car_north_IDs[i], "position").position.z + (CAR_SPEED * deltaTime)
                     }                
                     Entities.editEntity(car_north_IDs[i], {
                         position: newPosition
@@ -466,7 +466,7 @@
 
     function setAnimation(id, animation) {
         Entities.editEntity(id, animation);
-        debugPrint("Animation called on " + JSON.stringify(id));
+        // debugPrint("Animation called on " + JSON.stringify(id));
     }
 
     function debugPrint(message) {
