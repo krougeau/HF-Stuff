@@ -1,7 +1,6 @@
 name = TheLush
 scale = 1
 filename = F_VinCov.fbx
-marketplaceID = {15d95f9e-bf47-405d-886e-315703060a18}
 texdir = textures
 joint = jointEyeRight = RightEye
 joint = jointRightHand = RightHand
