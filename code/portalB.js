@@ -1,7 +1,7 @@
 (function(){ 
     var teleport;
     // var portalDestination;
-    var portalDestination = "roguesgallery/8.02337,-11.4892,88.0471/0,-0.00468639,0,0.999989";
+    var portalDestination = "thepalace.rougeaugallery.com/8.02337,-11.4892,88.0471/0,-0.00468639,0,0.999989";
     //var animationURL;
 
     function playSound() {
